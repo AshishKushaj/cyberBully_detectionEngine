@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    
+    <link rel="stylesheet" href="/static/style.css">
+
+
+
+    <!-- <body style="background-image: url('../static/bg1.jpg');"> -->
+      <body>
+
+        <!-- <img style="position:relative;left:430px;" src="../static/head.png" alt="not found"/> -->
+
+
+ <div class="container">
+  <div class="wrapper">
+      <div class="banner-image"></div>
+      
+      <h1>Comment Classifier</h1>
+      <p>Paste the comment in below text box and click on button detect</p>
+
+      <!-- Form with styled buttons -->
+      <form action='/predict' method="POST">
+          <label for="w3review"></label>
+          <!-- <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea> -->
+          <textarea id="w3review" name="w3review" rows="4" cols="50">{{ texta }}</textarea>
+
+          <br><br>
+          <input type="submit" value="Detect" class="btn fill">
+          <a href="https://cyberbaap.org/cyberbullying/reporting/" target="_blank" class="btn outline">Report</a>
+          <br>
+          <br class="res" style="color:white">
+          <p>{{pred}}</p>
+          <br>
+          <br>
+      </form>
+  </div>
+</div>
+
+
+    </body>
+</html>
